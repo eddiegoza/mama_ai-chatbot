@@ -4,6 +4,7 @@ from django.contrib import admin
 from django.urls import path, include
 from ai.views import chat  # Import the chat view directly
 from users import views
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -14,4 +15,4 @@ urlpatterns = [
     path('login/', views.login_view, name='login'),
     path('health_data/', views.health_data, name='health_data'),
     path('visualization/', views.data_visualization, name='visualization'),
-]
+] 

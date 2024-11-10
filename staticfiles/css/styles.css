@@ -1,0 +1,114 @@
+/* Example Color Variables */
+:root {
+    --primary-color: #2a9d8f;  /* e.g., sea green */
+    --secondary-color: #264653;  /* dark green for accents */
+    --light-color: #e9c46a;      /* soft yellow for highlights */
+    --dark-color: #264653;       /* dark grey for text */
+    --background-color: #f4f4f9; /* light grey for background */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--dark-color);
+    font-family: 'Arial', sans-serif;
+}
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+.btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+.card {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+/* For larger screens */
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+/* Button Hover Effect */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background-color: var(--secondary-color);
+}
+
+/* Card Shadow on Hover */
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.navbar {
+    background-color: var(--secondary-color);
+    padding: 15px;
+}
+
+.navbar a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: var(--light-color);
+}
+.chatbox {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow-y: auto;
+    height: 300px;
+}
+
+.chat-input {
+    border: 1px solid var(--primary-color);
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.chat-input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
