@@ -34,6 +34,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
 # Templates settings
 TEMPLATES = [
     {
@@ -98,3 +99,17 @@ USE_L10N = True
 USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# settings.py
+# Enable CSRF protection
+CSRF_COOKIE_SECURE = False
+SESSION_COOKIE_SECURE = False
+SECURE_SSL_REDIRECT = False  # Redirect to HTTPS
+PASSWORD_HASHERS = [
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.Argon2PasswordHasher',
+]
+
+# Configure authentication settings for secure login
+LOGIN_REDIRECT_URL = '/health_data/'
+LOGOUT_REDIRECT_URL = '/login/'
