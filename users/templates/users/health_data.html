@@ -1,0 +1,23 @@
+<h2>Enter your Health Data</h2>
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="blood_pressure" placeholder="Blood Pressure" required>
+    <input type="text" name="glucose_level" placeholder="Glucose Level" required>
+    <button type="submit">Submit</button>
+</form>
+
+<h2>Your Data</h2>
+<table>
+    <tr>
+        <th>Timestamp</th>
+        <th>Blood Pressure</th>
+        <th>Glucose Level</th>
+    </tr>
+    {% for entry in data %}
+    <tr>
+        <td>{{ entry.timestamp }}</td>
+        <td>{{ entry.blood_pressure }}</td>
+        <td>{{ entry.glucose_level }}</td>
+    </tr>
+    {% endfor %}
+</table>

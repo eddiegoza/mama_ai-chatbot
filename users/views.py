@@ -16,7 +16,7 @@ def register(request):
             return redirect('login')
     else:
         form = UserCreationForm()
-    return render(request, 'register.html', {'form': form})
+    return render(request, 'users/register.html', {'form': form})
 
 def login_view(request):
     if request.method == "POST":
@@ -39,7 +39,7 @@ def health_data(request):
         return redirect('health_data')
     
     data = HealthMetrics.objects.filter(user=request.user).order_by('-timestamp')
-    return render(request, 'health_data.html', {'data': data})
+    return render(request, 'users/health_data.html', {'data': data})
 
 # Data visualization page
 def data_visualization(request):
@@ -63,12 +63,8 @@ def data_visualization(request):
     fig = px.line(x=list(range(len(blood_pressure_data))), y=blood_pressure_data, title='Blood Pressure Trend')
     fig.show()
 
-    return render(request, 'visualization.html', {'plot': '/path/to/save/plot.png'})
+    return render(request, 'users/visualization.html', {'plot': '/path/to/save/plot.png'})
 
 def logout_view(request):
     logout(request)
     return redirect('home')  # Or any page you want to redirect the user to after logout
-
-
-def health_data_view(request):
-    return render(request, 'health_data/health_data.html')
