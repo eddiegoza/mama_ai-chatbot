@@ -1,0 +1,39 @@
+<!-- ai/templates/ai/chatbot.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+</head>
+<body>
+    <h1>Welcome to MaMa AI</h1>
+    <form id="chat-form" method="POST" action="{% url 'chat' %}">
+        <label for="message">Your Message:</label>
+        <input type="text" id="message" name="message" required>
+        <button type="submit">Send</button>
+    </form>
+
+    <div id="chat-response"></div>
+
+    <script>
+        const chatForm = document.getElementById('chat-form');
+        chatForm.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const messageInput = document.getElementById('message');
+            const userMessage = messageInput.value;
+            
+            const response = await fetch("{% url 'chat' %}", {
+                method: 'POST',
+                body: new URLSearchParams({
+                    'message': userMessage,
+                }),
+            });
+
+            const data = await response.json();
+            document.getElementById('chat-response').innerText = "AI: " + data.message;
+        });
+    </script>
+</body>
+</html>
