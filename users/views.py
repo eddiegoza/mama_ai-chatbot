@@ -49,8 +49,11 @@ def health_data(request):
         health_entry.save()
         return redirect('health_data')
     
-    data = HealthMetrics.objects.filter(user=request.user).order_by('-timestamp')
+    # data = HealthMetrics.objects.filter(user=request.user).order_by('-timestamp')
+    data = HealthMetrics.objects.all()
     return render(request, 'users/health_data.html', {'data': data})
+
+
 
 # Data visualization page
 @login_required
