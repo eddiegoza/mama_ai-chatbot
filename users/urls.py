@@ -1,12 +1,9 @@
-# users/urls.py
-
 from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('register/', views.register, name='register'),
-    path('login/', views.login_view, name='login'),
-    path('logout/', views.logout_view, name='logout'),
-    path('health_data/', views.health_data, name='health_data'),
-    path('visualization/', views.data_visualization, name='visualization'),
+    path('', views.home, name='home'),  # Homepage with login and signup options
+    path('health_data/', views.health_data, name='health_data'),  # Data input view
+    path('visualization/', views.data_visualization, name='data_visualization'),  # Data visualization view
+    path('logout/', views.logout_view, name='logout'),  # Logout view
 ]

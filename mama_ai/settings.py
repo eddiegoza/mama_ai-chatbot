@@ -109,5 +109,10 @@ PASSWORD_HASHERS = [
 ]
 
 # Configure authentication settings for secure login
-LOGIN_REDIRECT_URL = '/health_data/'
-LOGOUT_REDIRECT_URL = '/login/'
+# LOGIN_REDIRECT_URL = 'users/health_data/'
+# LOGOUT_REDIRECT_URL = 'users/login/'
+
+LOGIN_URL = 'login'  # Redirect to this view if unauthenticated
+LOGIN_REDIRECT_URL = 'health_data'  # Redirect here after login
+LOGOUT_REDIRECT_URL = 'login'  # Redirect here after logout
+LOGIN_REDIRECT_URL = '/visualization/'
