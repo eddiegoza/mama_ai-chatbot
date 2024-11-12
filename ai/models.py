@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 # Model to store health metrics data
 class HealthMetrics(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="users_health_metrics")
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="ai_health_metrics")
     health_data = models.JSONField()
     blood_pressure = models.CharField(max_length=100)
     glucose_level = models.CharField(max_length=100)
