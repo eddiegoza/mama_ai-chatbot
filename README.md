@@ -46,7 +46,7 @@ To install and run Mama-AI locally, follow these steps:
 3. **Run the Chatbot**:
    ```bash
    python manage.py runserver
-4. **Access Mama-AI: Open the browser at http://localhost:5000 (or the specified port) to start chatting with Mama-AI**.
+4. **Access Mama-AI: Open the browser at http://127.0.0.1:8000 (or the specified port) to start chatting with Mama-AI**.
    
 ## Usage
 
