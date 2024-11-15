@@ -78,5 +78,3 @@ For questions, suggestions, or feedback, feel free to reach out at eddiegoza@gma
 **Disclaimer**: Mama-AI is an informational tool only and does not provide medical diagnoses or treatment. Always consult a qualified health professional for personal medical advice.
  ```bash
 Feel free to modify sections such as installation instructions and contact details based on your specific implementation and setup.
-
-
