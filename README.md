@@ -80,6 +80,3 @@ For questions, suggestions, or feedback, feel free to reach out at eddiegoza@gma
 Feel free to modify sections such as installation instructions and contact details based on your specific implementation and setup.
 
 
-
-
-
