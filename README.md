@@ -1,4 +1,4 @@
-# Mama-AI
+# Mama-AI 
 
 Mama-AI is an AI-powered chatbot designed to answer health-related questions, provide wellness advice, and guide users to reliable information for a healthier lifestyle. Mama-AI is an accessible and helpful tool for users seeking guidance on general health topics, symptoms, preventative care, and more. It combines advanced natural language processing with an empathetic approach to offer personalized responses while promoting evidence-based information.
 
