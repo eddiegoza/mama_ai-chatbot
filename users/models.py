@@ -11,5 +11,8 @@ class HealthMetrics(models.Model):
 
     def __str__(self):
         return f"Health data for {self.user.username} at {self.timestamp}"
-    
-    # Add more fields like weight, heart_rate, etc.
+class Session(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    session_token = models.CharField(max_length=255, unique=True)
+    last_active = models.DateTimeField(auto_now=True)
+

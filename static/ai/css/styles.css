@@ -1,0 +1,117 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Chat Container */
+#chat-container {
+    width: 400px;
+    height: 600px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+#chat-header {
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+#chat-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+#chat-header p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+}
+
+/* Chat Area */
+#chat-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Chat Bubbles */
+.chat-bubble {
+    max-width: 75%;
+    padding: 10px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.chat-bubble.user {
+    background: #007bff;
+    color: white;
+    align-self: flex-end;
+}
+
+.chat-bubble.bot {
+    background: #f1f1f1;
+    color: #333;
+    align-self: flex-start;
+}
+
+/* Input Form */
+#chat-form {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background: #f9f9f9;
+}
+
+#message {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#message:focus {
+    border-color: #007bff;
+}
+
+#sendBtn {
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#sendBtn:hover {
+    background: #0056b3;
+}

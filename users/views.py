@@ -10,6 +10,7 @@ import plotly.express as px
 import os
 from django.conf import settings
 
+
 def home(request):
     if request.user.is_authenticated:
         return redirect('health_data')

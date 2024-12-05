@@ -98,11 +98,11 @@ USE_TZ = True
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# settings.py
+
 # Enable CSRF protection
-CSRF_COOKIE_SECURE = False
-SESSION_COOKIE_SECURE = False
-SECURE_SSL_REDIRECT = False  # Redirect to HTTPS
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True  # Redirect to HTTPS
 PASSWORD_HASHERS = [
     'django.contrib.auth.hashers.PBKDF2PasswordHasher',
     'django.contrib.auth.hashers.Argon2PasswordHasher',
